@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="assets/home.css">
+</head>
+<body>
+    <section class="hero" aria-labelledby="header">
+        <h1 id="header" hidden>Hero section</h1>
+        <nav class="navbar">
+            <img src="assets/images/logo-white.png" alt="Logo" class="logo"/>
+            <button class="topnavOpen" id="btnOpen" aria-expanded="false">
+              <i class='bx bx-menu'></i>
+            </button> 
+            <div class="topnav">
+              <button class="topnavClose" id="btnClose"><i class='bx bx-x'></i></button>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="client.html">Clients</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </div>
+              <div class="nav-btns">
+                <a href="#"><button class="login-btn">Login</button></a>
+                <a href="#"><button class="register-btn">Register</button></a>
+              </div> 
+          </nav>
+          <div class="hero_content">
+            <div class="hero_text">
+                <h1>Hello There,</h1>
+                <p>Welcome to Talent Matrix, the perfect place for you to discover, connect and collaborate with the best talents in web development, design, photography and more.</p>
+            </div>
+            <div class="search_field">
+                <div class="search_bar">
+                    <i class='bx bx-search'></i>
+                    <input type="text" id="search" name="search" placeholder="Search Talents">
+                </div>
+                <div class="popular">
+                    <p>Popular:</p>
+                    <ul class="popular_search_list">
+                        <li class="list_item"><a href="#">Graphics Design</a></li>
+                        <li class="list_item"><a href="#">Artificial Intelligence</a></li>
+                        <li class="list_item"><a href="#">Web Design</a></li>
+                        <li class="list_item"><a href="#">Music & Audio</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+    </section>
+    
+</body>
+</html>

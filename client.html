@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/client.css" />
+    <title>Clients</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#"
+        ><img src="assets/images/logo.svg" alt="Logo" class="logo"
+      /></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="client.html">Clients</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="nav-btns">
+        <a href="#"><button class="login-btn">Login</button></a>
+        <a href="#"><button class="register-btn">Register</button></a>
+      </div>
+    </nav>
+    <div class="main-container">
+      <span class="best-creators">The best creators trust talent matrix</span>
+      <div class="flex-row-cb">
+        <div class="rectangle">
+          <div class="oip"></div>
+          <span class="lorem-ipsum"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,</span
+          >
+        </div>
+        <div class="rectangle-1">
+          <div class="ibest"></div>
+          <span class="lorem-ipsum-2"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,</span
+          >
+        </div>
+      </div>
+
+      <div class="flex-row-a">
+        <div class="rectangle-3">
+          <div class="tech"></div>
+          <span class="lorem-ipsum-4"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,</span
+          >
+        </div>
+        <div class="rectangle-5">
+          <div class="dhi"></div>
+          <span class="lorem-ipsum-6"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,</span
+          >
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="category">
+          <h5>Category</h5>
+          <a href="#">Artificial Intelligence</a>
+          <a href="#">Art & Photography</a>
+          <a href="#">Fashion & Model</a>
+          <a href="#">Graphics & Design</a>
+          <a href="#">Music & Audio</a>
+          <a href="#">Programming & Tech</a>
+          <a href="#">Sales & Marketing</a>
+          <a href="#">Video & Animation</a>
+          <a href="#">Web, Mobile & Software dev</a>
+          <a href="#">Writing & Translation</a>
+        </div>
+        <div class="info">
+          <a href="#">About Us</a>
+          <a href="#" id="open-contact-modal">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#" id="open-feedback-modal">Feedback</a>
+        </div>
+        <div class="contact-details">
+          <p>Thimphu, Bhutan</p>
+          <a href="mailto:12230054.gcit@rub.edu.bt"
+            >talentmatrix.bht@gmail.com</a
+          >
+          <div class="social-icons">
+            <a href="#"
+              ><img src="assets/images/facebook-icon.svg" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="assets/images/linkedin-icon.svg" alt="Linked in"
+            /></a>
+            <a href="#"
+              ><img src="assets/images/twitter-icon.svg" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img src="assets/images/discord-icon.svg" alt="Discord"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        <p>copyright&copy; Talent Matrix 2024. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Contact us module start -->
+    <dialog class="contact-modal" id="contact-modal">
+      <button class="close-contact-modal">
+        <img src="assets/images/cross.svg" alt="Close dialog" />
+      </button>
+      <form action="#" method="modal">
+        <h3>Contact Us</h3>
+        <p>
+          You need to be either a client or a registered talent of Talent Matrix
+          to contact us through this. If you are not either of these please use
+          our email address or any of the social platforms provided to contact
+          us.
+        </p>
+        <fieldset>
+          <legend>Role:</legend>
+          <div class="role-field">
+            <div class="client">
+              <input
+                type="radio"
+                id="client"
+                name="role"
+                value="client"
+                required
+              />
+              <label for="client">Client</label>
+            </div>
+            <div class="talent">
+              <input type="radio" id="talent" name="role" value="talent" />
+              <label for="talent">Talent</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="id-field">
+          <label for="ID">ID:</label>
+          <input type="text" id="ID" name="ID" pattern="[0-9]{8}" required />
+        </div>
+        <div class="message-field">
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="5"
+            spellcheck="false"
+            required
+          ></textarea>
+        </div>
+        <input type="submit" class="submit-btn" />
+      </form>
+    </dialog>
+    <!-- Contact us modal end -->
+
+    <!-- Feedback modal start-->
+    <dialog class="feedback-modal">
+      <button class="close-feedback-modal">
+        <img src="assets/images/cross.svg" alt="Close modal" />
+      </button>
+      <form action="#" method="modal">
+        <h3>Feedback</h3>
+        <p>
+          Thank you for taking the time to provide us with your valuable
+          feedback. Your insights are crucial in helping us improve our services
+          to better meet your needs.
+        </p>
+        <textarea
+          name="feedback"
+          id="feedback"
+          cols="30"
+          rows="5"
+          spellcheck="false"
+          required
+        ></textarea>
+        <input type="submit" class="submit-btn" />
+      </form>
+    </dialog>
+  </body>
+  <script src="assets/client.js"></script>
+</html>
