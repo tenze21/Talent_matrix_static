@@ -85,8 +85,11 @@
     font-size: 1.25rem;
     font-weight: var(--font-weight-medium);
   }
-  .navbar ul li a:hover{
-    color: var(--green);
+  .navbar ul li a{
+    &:hover, &:active, &:focus-visible{
+      color: var(--green);
+      outline: none;
+    }
   }
   .nav-btns{
     display: flex;
@@ -101,11 +104,14 @@
     border: 1px solid var(--grey-dark);
     background-color: #fff;
     color: #000;
+    text-decoration: none;
   }
-  .nav-btns .login-btn:hover{
-    background-color: var(--grey-dark);
-    cursor: pointer;
-    color: #fff;
+  .nav-btns .login-btn{
+    &:hover, &:focus-visible{
+      background-color: var(--grey-dark);
+      cursor: pointer;
+      color: #fff;
+    }
   }
   .nav-btns .register-btn{
     padding: 0.625rem 1.75rem;
@@ -115,14 +121,16 @@
     border-radius: 10px;
     border: 1px solid var(--green);
     background-color: #fff;
+    text-decoration: none;
+    color: #000;
   }
-  .nav-btns .register-btn:hover{
-    background-color: var(--green);
-    cursor: pointer;
-    color: #fff;
+  .nav-btns .register-btn{
+    &:hover, &:focus-visible{
+      background-color: var(--green);
+      cursor: pointer;
+      color: #fff;
+    }
   }
-  
-
 input,
 select,
 textarea,
@@ -314,10 +322,8 @@ button {
 
 
 .footer {
-background-color: var(--blue-dark);
-transform: translateY(3rem);  
-overflow: hidden;
-padding: 33px 60px 0 69px;
+  background-color: var(--blue-dark);
+  padding: 33px 69px 0 69px;
   .footer-content {
     display: flex;
     justify-content: space-between;
@@ -340,9 +346,24 @@ padding: 33px 60px 0 69px;
       font-family: var(--font-family-body);
       font-size: 24px;
       font-weight: var(--font-weight-medium);
-    }
-    a:hover {
-      text-decoration: underline;
+      width: fit-content;
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:hover::after, &:focus-visible::after{
+        width: 100%;
+      }
     }
   }
   .info {
@@ -356,9 +377,24 @@ padding: 33px 60px 0 69px;
       font-family: var(--font-family-body);
       font-size: 24px;
       font-weight: var(--font-weight-medium);
-    }
-    a:hover {
-      text-decoration: underline;
+      position: relative;
+      width: fit-content;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:hover::after, &:focus-visible::after{
+        width: 100%;
+      }
     }
   }
   .contact-details {
@@ -372,15 +408,27 @@ padding: 33px 60px 0 69px;
     a {
       text-decoration: none;
       color: #fff;
-    }
-    a:hover {
-      text-decoration: underline;
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:hover::after, &:focus-visible::after{
+        width: 100%;
+      }
     }
     .social-icons {
       display: flex;
-      gap: 10px;
-      height: 7%;
-      width: 150px;
+      gap: 20px;
     }
   }
   .copyright {

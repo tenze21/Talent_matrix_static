@@ -69,6 +69,11 @@
     display: none;
   }
 }
+.topnav{
+  display: flex;
+  align-items: center;
+  gap: 15vw;
+}
 .navbar ul {
   display: flex;
   gap: 5.25rem;
@@ -86,6 +91,7 @@
 .navbar ul li a{
   &:hover, &:active, &:focus-visible{
     color: var(--green);
+    outline: none;
   }
 }
 .nav-btns {
@@ -93,7 +99,7 @@
   gap: 1rem;
   align-items: center;
 }
-.nav-btns .login-btn {
+.nav-btns .login-btn{
   padding: 0.625rem 3.0625rem;
   font-family: var(--font-family-header);
   font-weight: var(--font-weight-semi-bold);
@@ -102,8 +108,9 @@
   border: 1px solid var(--grey-dark);
   background-color: #fff;
   color: #000;
+  text-decoration: none;
 }
-.nav-btns .login-btn:hover {
+.nav-btns .login-btn:hover, .login-btn:focus-visible{
   background-color: var(--grey-dark);
   cursor: pointer;
   color: #fff;
@@ -116,11 +123,14 @@
   border-radius: 10px;
   border: 1px solid var(--green);
   background-color: #fff;
+  color: #000;
+  text-decoration: none;
 }
-.nav-btns .register-btn:hover {
+.nav-btns .register-btn:hover, .register-btn:focus-visible{
   background-color: var(--green);
   cursor: pointer;
   color: #fff;
+  outline: none;
 }
 .header {
   text-align: center;
@@ -176,6 +186,7 @@
 .disclosure_button:hover, .disclosure_button:active, .disclosure_button:focus-visible{
   color: var(--green);
   cursor: pointer;
+  outline: none;
 }
 .answer {
   font-family: var(--font-family-body);
@@ -198,6 +209,7 @@
 .talent-question {
   gap: 5.5rem;
 }
+
 .footer {
   background-color: var(--blue-dark);
   padding: 33px 69px 0 69px;
@@ -223,9 +235,24 @@
       font-family: var(--font-family-body);
       font-size: 24px;
       font-weight: var(--font-weight-medium);
-    }
-    a:hover {
-      text-decoration: underline;
+      width: fit-content;
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:hover::after, &:focus-visible::after{
+        width: 100%;
+      }
     }
   }
   .info {
@@ -239,9 +266,24 @@
       font-family: var(--font-family-body);
       font-size: 24px;
       font-weight: var(--font-weight-medium);
-    }
-    a:hover {
-      text-decoration: underline;
+      position: relative;
+      width: fit-content;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:hover::after, &:focus-visible::after{
+        width: 100%;
+      }
     }
   }
   .contact-details {
@@ -255,9 +297,23 @@
     a {
       text-decoration: none;
       color: #fff;
-    }
-    a:hover {
-      text-decoration: underline;
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      &:focus-visible{
+        outline: none;
+      }
+      &:hover::after, &:focus-visible::after{
+        width: 100%;
+      }
     }
     .social-icons {
       display: flex;
@@ -449,7 +505,14 @@
 .feedback-modal::backdrop {
   background-color: rgb(0 0 0 /0.5);
 }
-
+@media screen and (max-width:1400px){
+  .topnav{
+    gap: 5vw;
+  }
+  .navbar ul{
+    gap: 3rem;
+  }
+}
 @media screen and (max-width:1140px){
   .questions{
     padding: 20px;
@@ -525,7 +588,18 @@
   .navbar{
     box-shadow: 0px 2px 4px black;
     .nav-btns{
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      .login-btn{
+        background: var(--grey-dark);
+        color: #fff;
+      }
+      .register-btn{
+        background: var(--green);
+        color: #fff;
+      }
     }
     .topnavOpen{
       display: flex;
@@ -539,6 +613,8 @@
       translate: 0;
     }
     .topnav{
+      flex-direction: column;
+      gap: 2rem;
       position: fixed;
       background-color: #fff;
       inset: 0;
