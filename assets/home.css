@@ -329,7 +329,7 @@
     height: 100vh;
   }
   @media screen and (max-width: 550px) {
-    height: 75vh;
+    height: 60vh;
   }
 }
 
