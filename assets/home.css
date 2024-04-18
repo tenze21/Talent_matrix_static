@@ -686,6 +686,9 @@
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    @media screen and (max-width:550px) {
+      font-size: 1.5rem;
+    }
   }
   .cards_wrapper {
     display: grid;
@@ -731,6 +734,9 @@
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    @media screen and (max-width:550px) {
+      font-size: 1.5rem;
+    }
   }
   .cards_wrapper{
     display: flex;
@@ -743,9 +749,10 @@
       border-radius: 10px;
       padding: 23px;
       box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-      img{
+      /* img{
         height: 20rem;
-      }
+        width: ;
+      } */
       p{
         font-family: var(--font-family-body);
         font-size: 1.3rem;
@@ -754,6 +761,9 @@
       }
       @media screen and (max-width: 830px) {
         max-width: 30rem;
+      }
+      @media screen and (max-width: 550px) {
+        max-width: 330px;
       }
     }
   }
@@ -769,6 +779,9 @@
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    @media screen and (max-width:550px) {
+      font-size: 1.5rem;
+    }
   }
   .company_logo_wrapper{
     display: flex;
