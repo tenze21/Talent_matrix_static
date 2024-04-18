@@ -222,6 +222,22 @@
             height: 50px;
             padding-left: 4rem;
             font-size: 1rem;
+            &::placeholder {
+              font-size: 1.3rem;
+              font-family: var(--font-family-body);
+            }
+          }
+          @media screen and (max-width:516px){
+            max-width: 460px;
+          }
+          @media screen and (max-width:476px){
+            max-width: 440px;
+          }
+          @media screen and (max-width:455px){
+            max-width: 400px;
+          }
+          @media screen and (max-width:416px){
+            max-width: 350px;
           }
         }
         .bx-search {
@@ -281,6 +297,11 @@
                 cursor: pointer;
                 outline: none;
               }
+              @media screen and (max-width: 550px) {
+                font-size: 0.875rem;
+                padding: 5px 10px;
+                height: 25px;
+              }
             }
           }
           @media screen and (max-width: 850px) {
@@ -292,6 +313,7 @@
         }
         @media screen and (max-width: 550px) {
           align-items: flex-start;
+          margin-top: 1rem;
         }
       }
     }
@@ -303,11 +325,11 @@
       margin-left: 1rem;
     }
   }
-  @media screen and (max-width: 550px) {
-    height: 80vh;
-  }
   @media screen and (max-width: 850px) {
-    height: 55vh;
+    height: 100vh;
+  }
+  @media screen and (max-width: 550px) {
+    height: 75vh;
   }
 }
 
@@ -342,6 +364,10 @@
       @media screen and (max-width:550px){
         font-size: 1rem;
       }
+    }
+    @media screen and (max-width:850px) {
+      width: 180px;
+      height: 180px;
     }
     @media screen and (max-width:550px) {
       width: 130px;
