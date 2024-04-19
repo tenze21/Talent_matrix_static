@@ -94,17 +94,27 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 39px;
+    gap: 1rem;
     input {
       max-width: 150px;
       height: 114px;
       border: none;
-      border-bottom: 2px solid var(--blue);
+      border: 2px solid var(--grey-dark);
+      border-radius: 10px;
       font-family: var(--font-family-body);
       font-weight: var(--font-weight-medium);
       font-size: 2rem;
       text-align: center;
       margin-bottom: 35px;
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        display: none;
+      }
+      &:focus-visible,
+      &:active {
+        outline: none;
+        border: 2px solid var(--blue);
+      }
     }
   }
   p {
@@ -117,67 +127,74 @@ form {
       color: var(--blue-light);
     }
   }
-  a {
-    text-decoration: none;
-    button {
-      width: 214px;
-      height: 47px;
-      border-radius: 5px;
-      background-color: var(--green);
-      border: none;
-      font-family: var(--font-family-header);
-      font-size: 1.5rem;
-      font-weight: var(--font-weight-semi-bold);
-      color: #fff;
-      position: relative;
-      margin-top: 60px;
-      display: block;
-      margin-inline-start: auto;
-      &:hover{
-        opacity: 0.93;
-        cursor: pointer;
-      }
-      img{
-       transform: translateX(2.5rem);
-      }
+  button {
+    width: 214px;
+    height: 47px;
+    border-radius: 5px;
+    background-color: var(--green);
+    border: none;
+    font-family: var(--font-family-header);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semi-bold);
+    color: #fff;
+    position: relative;
+    margin-top: 60px;
+    display: block;
+    margin-inline-start: auto;
+    pointer-events: none;
+    opacity: 0.7;
+    &:hover {
+      opacity: 0.93;
+      cursor: pointer;
     }
+    img {
+      transform: translateX(2.5rem);
+    }
+  }
+  .active {
+    pointer-events: auto;
+    opacity: 1;
   }
 }
 
-
-@media screen and (max-width:500px){
-  body{
+@media screen and (max-width: 550px) {
+  body {
     padding: 10px;
+    min-height: auto;
   }
-  .logo{
+  .logo {
     position: static;
     margin-bottom: 20px;
   }
-  form{
-    .header{
+  form {
+    .header {
       margin-bottom: 15px;
-      h1{
+      h1 {
         font-size: 1rem;
         margin-bottom: 5px;
       }
-      p{
+      p {
         font-size: 0.875rem;
       }
     }
-    fieldset{
+    fieldset {
       gap: 10px;
-      input{
-        max-width: 100px;
-        height: 100px;
+      input {
+        max-width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
       }
     }
-    p{
+    p {
       font-size: 0.875rem;
     }
-    a{
-      button{
-        margin-top: 30px;
-        width: 200px;
+    button {
+      margin-top: 30px;
+      height: 40px;
+      width: 150px;
+      font-weight: var(--font-weight-medium);
+      img {
+        transform: translateX(1rem);
       }
     }
   }

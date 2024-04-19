@@ -30,13 +30,13 @@
                 <p>To keep your account safe, Talent Matrix wants to confirm if it’s really you trying to login.</p>
             </div>
             <fieldset>
-                <input type="text" id="code" name="code" maxlength="1" required>
-                <input type="text" id="code" name="code" maxlength="1">
-                <input type="text" id="code" name="code" maxlength="1">
-                <input type="text" id="code" name="code" maxlength="1">
+                <input type="number" id="verification_code" name="verification_code" maxlength="1" required>
+                <input type="number" id="verification_code" name="verification_code" maxlength="1" disabled>
+                <input type="number" id="verification_code" name="verification_code" maxlength="1" disabled>
+                <input type="number" id="verification_code" name="verification_code" maxlength="1" disabled>
             </fieldset>
             <p>We have sent a four digit verification code to your email <span id="user_email">tenzin@2112.example.com</span>. Please enter the code in the above field.</p>
-            <a href="passwordreset.html"><button>Next <img src="assets/images/Arrow 2.svg" alt="" aria-hidden="true"></button></a>
+            <button id="next_btn">Next <img src="assets/images/Arrow 2.svg" alt="" aria-hidden="true"></button>
         </form>
     </main>
     <script src="assets/accountRecovery.js"></script>
