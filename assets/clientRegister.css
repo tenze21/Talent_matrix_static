@@ -77,6 +77,7 @@ body {
   margin-bottom: 50px;
   .header {
     text-align: center;
+    margin-bottom: 30px;
     h1 {
       font-family: var(--font-family-header);
       font-size: 2rem;
@@ -88,7 +89,6 @@ body {
       font-family: var(--font-family-body);
       font-size: 1.5rem;
       font-weight: var(--font-weight-bold);
-      margin-bottom: 30px;
       color: var(--grey-dark);
     }
   }
@@ -214,9 +214,19 @@ body {
   }
   .registration-form {
     margin-top: 10px;
+    .header{
+      margin-bottom: 1rem;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: var(--font-weight-semi-bold);
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
     .form-field {
       input {
-        width: 380px;
+        width: 350px;
       }
     }
     .address-field {
@@ -224,19 +234,22 @@ body {
         .address-input {
           flex-direction: column;
           input {
-            width: 380px;
+            width: 345px;
           }
           select {
-            width: 393px;
+            width: 357px;
             padding-right: 1rem;
           }
         }
       }
     }
+    .submit-btn{
+      width: 301px;
+    }
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 390px) {
   .registration-form {
     margin-top: 10px;
     .form-field {
@@ -259,7 +272,34 @@ body {
       }
     }
     .submit-btn{
-      width: 320px;
+      width: 301px;
+    }
+  }
+}
+@media screen and (max-width:338px) {
+  .registration-form {
+    margin-top: 10px;
+    .form-field {
+      input {
+        width: 315px;
+      }
+    }
+    .address-field {
+      fieldset {
+        .address-input {
+          flex-direction: column;
+          input {
+            width: 310px;
+          }
+          select {
+            width: 323px;
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+    .submit-btn{
+      width: 301px;
     }
   }
 }
