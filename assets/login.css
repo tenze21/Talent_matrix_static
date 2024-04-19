@@ -185,7 +185,7 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   body {
     padding: 10px;
   }
@@ -194,14 +194,32 @@ body {
   }
   .login-form {
     margin-top: 20px;
-    padding: 25px 30px;
+    padding: 1rem 1.5rem;
+    .password-field, .email-field{
+      .form-field{
+        width: 300px;
+      }
+      .field-icon{
+        font-size: 1.5rem;
+        top: 35px;
+        right: 10px;
+      }
+    }
+    button{
+      width: 300px;
+    }
   }
   .division{
     .line{
-      width: 420px;
+      width: 350px;
     }
     p{
-      right: 120px;
+      right: 90px;
+    }
+  }
+  .register-link{
+    button{
+      width: 300px;
     }
   }
 }
