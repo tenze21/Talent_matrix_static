@@ -97,6 +97,9 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      p{
+        font-family: var(--font-family-body);
+      }
       label {
         margin-bottom: 3px;
         font-family: var(--font-family-header);
@@ -129,17 +132,6 @@
       .bx:hover{
         cursor: pointer;
       }
-    }
-    .portfolio-field{
-      /* position: relative; */
-        p{
-            font-family: var(--font-family-body);
-            font-size: 1rem;
-        }
-        /* .bx{
-            position: absolute;
-            top: 55px;
-        } */
     }
     .submit-btn{
       width: 376px;
@@ -181,41 +173,26 @@
     }
     .application-form{
       margin-top: 10px;
+      .header{
+        h1{
+          font-size: 1.5rem;
+          font-weight: var(--font-weight-semi-bold);
+        }
+        p{
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
       .form-field{
+        p{
+          max-width: 350px;
+        }
         input{
-          width: 380px;
+          width: 350px;
         }
       }
-      .portfolio-field{
-        margin-left: 2rem;
-        input{
-          width: 385px;
-        }
-        .bx{
-          right: 2.5rem;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width:465px){
-    .application-form{
-      .portfolio-field{
-        margin-left: 1.5rem;
-        .bx{
-          right: 1.9rem;
-        }
-      }
-    }
-  }
-  
-  @media screen and (max-width:450px){
-    .application-form{
-      .portfolio-field{
-        margin-left: 0.5rem;
-        .bx{
-          right: 1rem;
-        }
+      .submit-btn{
+        width: 301px;
       }
     }
   }
