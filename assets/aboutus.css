@@ -146,13 +146,15 @@
   margin-top: 2rem;
   font-family: var(--font-family-header);
   font-weight: var(--font-weight-medium);
-  font-size: 45px;
+  font-size: 2.8rem;
+  @media screen and (max-width:550px) {
+    font-size: 1.5rem;
+  }
 }
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 50px; */
   img {
     width: 300px;
     height: 100px;
@@ -161,16 +163,21 @@
 .description {
   font-family: var(--font-family-body);
   font-size: 1.5rem;
-  max-width: 1360px;
+  max-width: 89vw;
   display: block;
   margin-inline: auto;
   margin-bottom: 1rem;
+  @media screen and (max-width:550px){
+    font-size: 1rem;
+  }
 }
 .line {
   background: black;
-  max-width: 1360px;
+  width: clamp(320px, 89vw, 3000px);
   height: 3px;
-  margin: 0 44px 50px 44px;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 3rem;
 }
 .leadership-team {
   margin: 0 0 50px 27.2px;
@@ -183,71 +190,20 @@
   font-size: 45px;
   color: var(--blue);
 }
-.row-1 {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-direction: row;
-  /* width: fit-content; */
-  box-sizing: border-box;
-  align-items: center;
+.cards_wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 323px);
+  gap: 2rem;
   justify-content: center;
-  gap: 8vw;
+  margin-bottom: 2rem;
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: repeat(2, 323px);
+  }
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 323px);
+  }
 }
-.card-1 {
-  box-shadow: -5px -5px 4.8px 0px rgba(0, 0, 0, 0.25),
-    5px 5px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background: white;
-  position: relative;
-  /* margin-right: 98px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 29px 23.4px 34px 23.4px;
-  width: 323px;
-  height: 448px;
-  box-sizing: border-box;
-}
-.card-2 {
-  box-shadow: -5px -5px 4.8px 0px rgba(0, 0, 0, 0.25),
-    5px 5px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background: white;
-  position: relative;
-  /* margin-right: 98px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 29px 23.4px 34px 23.4px;
-  width: 323px;
-  height: 448px;
-  box-sizing: border-box;
-}
-.card-3 {
-  box-shadow: -5px -5px 4.8px 0px rgba(0, 0, 0, 0.25),
-    5px 5px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background: white;
-  position: relative;
-  /* margin-right: 98px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 29px 23.4px 34px 23.4px;
-  width: 323px;
-  height: 448px;
-  box-sizing: border-box;
-}
-.row-2 {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  gap: 8vw;
-}
-.card-4 {
+.card {
   box-shadow: -5px -5px 4.8px 0px rgba(0, 0, 0, 0.25),
     5px 5px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -261,20 +217,7 @@
   height: 448px;
   box-sizing: border-box;
 }
-.card-5 {
-  box-shadow: -5px -5px 4.8px 0px rgba(0, 0, 0, 0.25),
-    5px 5px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background: white;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 29px 23.4px 34px 23.4px;
-  width: 323px;
-  height: 448px;
-  box-sizing: border-box;
-}
+
 .image {
   width: 213px;
   height: 213px;
@@ -328,37 +271,12 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
-#popup {
-  padding: 50px;
-  max-width: 800px;
-  min-height: 600px;
-  border-radius: 2%;
-  background: var(--blue-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  box-shadow: 0 5px;
-  visibility: hidden;
-  opacity: 0;
-}
-#popup .close {
-  position: relative;
-  padding: 0 0 0 600px;
-}
-#popup .leaders-name {
-  color: #ffffff;
-}
-#popup .description {
-  color: #ffffff;
-}
 i.fa-sharp.fa-solid.fa-xmark {
   font-size: 2rem;
   color: #ffffff;
   cursor: pointer;
 }
-#popup1 {
+.popup {
   padding: 50px;
   max-width: 800px;
   min-height: 600px;
@@ -369,90 +287,29 @@ i.fa-sharp.fa-solid.fa-xmark {
   align-items: center;
   position: fixed;
   box-shadow: 0 5px;
-  visibility: hidden;
-  opacity: 0;
+  @media screen and (max-width:850px) {
+    max-width: 750px;
+  }
+  @media screen and (max-width:550px) {
+    max-width: 450px;
+  }
 }
-#popup1 .close {
-  position: relative;
-  padding: 0 0 0 600px;
+.popup .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
-#popup1 .leaders-name {
+.popup .leaders-name {
   color: #ffffff;
+  @media screen and (max-width:550px) {
+    font-size: 1.5rem;
+  }
 }
-#popup1 .description {
+.popup .description {
   color: #ffffff;
-}
-#popup2 {
-  padding: 50px;
-  max-width: 800px;
-  min-height: 600px;
-  border-radius: 2%;
-  background: var(--blue-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  box-shadow: 0 5px;
-  visibility: hidden;
-  opacity: 0;
-}
-#popup2 .close {
-  position: relative;
-  padding: 0 0 0 600px;
-}
-#popup2 .leaders-name {
-  color: #ffffff;
-}
-#popup2 .description {
-  color: #ffffff;
-}
-#popup3 {
-  padding: 50px;
-  max-width: 800px;
-  min-height: 600px;
-  border-radius: 2%;
-  background: var(--blue-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  box-shadow: 0 5px;
-  visibility: hidden;
-  opacity: 0;
-}
-#popup3 .close {
-  position: relative;
-  padding: 0 0 0 600px;
-}
-#popup3 .leaders-name {
-  color: #ffffff;
-}
-#popup3 .description {
-  color: #ffffff;
-}
-#popup4 {
-  padding: 50px;
-  max-width: 800px;
-  min-height: 600px;
-  border-radius: 2%;
-  background: var(--blue-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  box-shadow: 0 5px;
-  visibility: hidden;
-  opacity: 0;
-}
-#popup4 .close {
-  position: relative;
-  padding: 0 0 0 600px;
-}
-#popup4 .leaders-name {
-  color: #ffffff;
-}
-#popup4 .description {
-  color: #ffffff;
+  @media screen and (max-width:550px) {
+    font-size: 1rem;
+  }
 }
 .hamburger-menu {
   display: none;
@@ -791,123 +648,6 @@ i.fa-sharp.fa-solid.fa-xmark {
   .footer {
     padding: 10px 10px;
   }
-  .aboutus-title {
-    margin: 0 0 30px 0;
-  }
-  .aboutus-title h3 {
-    font-size: 24px;
-  }
-  .logo {
-    margin: 0 0 40px 0;
-  }
-  .description {
-    margin: 0 40px 20px 40px;
-  }
-  .description p {
-    font-size: 14px;
-  }
-  .line {
-    width: auto;
-    height: 1px;
-    margin: 0 20px 10px 20px;
-  }
-  .leadership-team {
-    margin: 0 0 30px 0;
-  }
-  .leadership-team h5 {
-    font-size: 24px;
-  }
-  .row-1 {
-    margin: 0 155px 30px 155px;
-    flex-direction: row;
-    width: auto;
-  }
-  .card-1 {
-    max-width: auto;
-    margin: 0;
-    margin-right: 30px;
-  }
-  .card-2 {
-    max-width: 323px;
-    margin: 0;
-    margin-right: 30px;
-  }
-  .card-3 {
-    display: block;
-    max-width: 323px;
-    margin: 0;
-  }
-  .row-2 {
-    margin: 0 155px 30px 155px;
-    flex-direction: row;
-    width: auto;
-  }
-  .card-4 {
-    max-width: 323px;
-    margin: 0;
-    margin-right: 30px;
-  }
-  .card-5 {
-    max-width: 323px;
-    margin: 0;
-  }
-  #popup {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup1 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup2 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup3 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup4 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
 }
 
 @media (max-width: 550px) {
@@ -1001,124 +741,6 @@ i.fa-sharp.fa-solid.fa-xmark {
       p {
         font-size: 1rem;
       }
-    }
-  }
-  .aboutus-title {
-    margin: 0 0 30px 0;
-  }
-  .aboutus-title h3 {
-    font-size: 24px;
-  }
-  .logo {
-    margin: 0 0 40px 0;
-  }
-  .description {
-    margin: 0 40px 20px 40px;
-  }
-  .description p {
-    font-size: 14px;
-  }
-  .line {
-    width: auto;
-    height: 1px;
-    margin: 0 20px 10px 20px;
-  }
-  .leadership-team {
-    margin: 0 0 30px 0;
-  }
-  .leadership-team h5 {
-    font-size: 24px;
-  }
-  .row-1 {
-    margin: 0 155px 0 155px;
-    flex-direction: column;
-    width: auto;
-  }
-  .card-1 {
-    max-width: auto;
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  .card-2 {
-    max-width: 323px;
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  .card-3 {
-    max-width: 323px;
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  .row-2 {
-    margin: 0 155px 30px 155px;
-    flex-direction: column;
-    width: auto;
-  }
-  .card-4 {
-    max-width: 323px;
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  .card-5 {
-    max-width: 323px;
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  #popup {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup1 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup2 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup3 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
-    }
-  }
-  #popup4 {
-    padding: 20px;
-    margin: 0 190px 0 190px;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    .close {
-      padding-left: 300px;
     }
   }
 }
