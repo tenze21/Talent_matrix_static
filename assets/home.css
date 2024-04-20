@@ -60,7 +60,7 @@
   padding-inline: 2.5rem;
   min-height: 5rem;
   .logo {
-    width: 3vw;
+    width: 2vw;
   }
   .topnavOpen {
     display: none;
@@ -81,6 +81,7 @@
   display: flex;
   gap: 5.25rem;
   justify-content: center;
+  align-items: center;
   @media screen and (max-width: 830px) {
     gap: 1.7rem !important;
   }

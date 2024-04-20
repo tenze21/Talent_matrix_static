@@ -15,65 +15,78 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/client.css" />
     <title>Clients</title>
   </head>
   <body>
     <nav class="navbar">
-      <a href="#"
-        ><img src="assets/images/logo.svg" alt="Logo" class="logo"
-      /></a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="client.html">Clients</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-      <div class="nav-btns">
-        <a href="#" class="login-btn">Login</a>
-        <a href="#" class="register-btn">Register</a>
+      <img src="assets/images/logo.svg" alt="Logo" />
+      <button class="topnavOpen" id="btnOpen" aria-expanded="false">
+        <i class="bx bx-menu"></i>
+      </button>
+      <div class="topnav">
+        <button class="topnavClose" id="btnClose">
+          <i class="bx bx-x"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="client.html">Clients</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="nav-btns">
+          <a href="login.html" class="login-btn">Login</a>
+          <a href="selectrole.html" class="register-btn">Register</a>
+        </div>
       </div>
     </nav>
-    <div class="main-container">
-      <span class="best-creators">The best creators trust talent matrix</span>
-      <div class="flex-row-cb">
-        <div class="rectangle">
-          <div class="oip"></div>
-          <span class="lorem-ipsum"
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,</span
-          >
+    <h1 class="best-creators">The best creators trust talent matrix</h1>
+    <main class="main-container">
+      <div class="card_wrapper">
+        <div class="client_logo">
+          <img src="assets/images/selice-logo.svg" alt="selice logo" />
         </div>
-        <div class="rectangle-1">
-          <div class="ibest"></div>
-          <span class="lorem-ipsum-2"
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,</span
-          >
-        </div>
+        <p class="card_body">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
       </div>
-
-      <div class="flex-row-a">
-        <div class="rectangle-3">
-          <div class="tech"></div>
-          <span class="lorem-ipsum-4"
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,</span
-          >
+      <div class="card_wrapper">
+        <div class="client_logo">
+          <img src="assets/images/ibest-logo.svg" alt="ibest logo" />
         </div>
-        <div class="rectangle-5">
-          <div class="dhi"></div>
-          <span class="lorem-ipsum-6"
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,</span
-          >
-        </div>
+        <p class="card_body">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
       </div>
-    </div>
+      <div class="card_wrapper">
+        <div class="client_logo">
+          <img src="assets/images/govtech-logo.svg" alt="" />
+        </div>
+        <p class="card_body">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+      </div>
+      <div class="card_wrapper">
+        <div class="client_logo">
+          <img src="assets/images/DHI-logo.svg" alt="DHI logo" />
+        </div>
+        <p class="card_body">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+      </div>
+    </main>
     <footer class="footer">
       <div class="footer-content">
         <div class="category">
@@ -190,8 +203,8 @@
         <textarea
           name="feedback"
           id="feedback"
-          cols="30"
-          rows="5"
+          cols="100"
+          rows="8"
           spellcheck="false"
           required
         ></textarea>
@@ -199,5 +212,43 @@
       </form>
     </dialog>
   </body>
-  <script src="assets/client.js"></script>
+  <script>
+    //for opening the contact us model
+    const openContactModel = document.querySelector("#open-contact-modal");
+    const closeContactModal = document.querySelector(".close-contact-modal");
+    const contactModal = document.querySelector("#contact-modal");
+
+    openContactModel.addEventListener("click", () => {
+      contactModal.showModal();
+    });
+
+    closeContactModal.addEventListener("click", () => {
+      contactModal.close();
+    });
+
+    //for opening and closing feedback model
+    const openFeedbackModal = document.querySelector("#open-feedback-modal");
+    const closeFeedbackModal = document.querySelector(".close-feedback-modal");
+    const feedbackModal = document.querySelector(".feedback-modal");
+
+    openFeedbackModal.addEventListener("click", () => {
+      feedbackModal.showModal();
+    });
+
+    closeFeedbackModal.addEventListener("click", () => {
+      feedbackModal.close();
+    });
+
+    //hamburger menu functionality
+    const btnOpen = document.querySelector("#btnOpen");
+    const btnClose = document.querySelector("#btnClose");
+
+    btnOpen.addEventListener("click", () => {
+      btnOpen.setAttribute("aria-expanded", "true");
+    });
+
+    btnClose.addEventListener("click", () => {
+      btnOpen.setAttribute("aria-expanded", "false");
+    });
+  </script>
 </html>
