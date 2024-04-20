@@ -283,7 +283,7 @@ i.fa-sharp.fa-solid.fa-xmark {
   color: #ffffff;
   cursor: pointer;
 }
-.popup {
+/* .popup {
   padding: 50px;
   max-width: 800px;
   min-height: 600px;
@@ -298,9 +298,7 @@ i.fa-sharp.fa-solid.fa-xmark {
     max-width: 750px;
   }
   @media screen and (max-width:550px) {
-    max-width: 450px;
-    left: 5vw !important;
-    top: 40vh !important;
+    max-width: 400px;
   }
 }
 .popup .close {
@@ -318,6 +316,56 @@ i.fa-sharp.fa-solid.fa-xmark {
   color: #ffffff;
   @media screen and (max-width:550px) {
     font-size: 1rem;
+  }
+} */
+
+.popup{
+  max-width: 850px;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: var(--blue-dark);
+  margin: auto;
+  position: fixed;
+  overflow: hidden;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .image{
+      margin-inline: auto;
+    }
+    .leaders-name{
+      color: #fff;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .close {
+      position: absolute;
+      background: none;
+      outline: none;
+      border: none;
+      right: 2rem;
+      top: 2rem;
+      cursor: pointer;
+    }
+    .description{
+      color: #fff;
+    }
+    .image{
+      @media screen and (max-width: 550px) {
+        width: 11rem;
+        height: 11rem;
+      }
+    }
+  }
+  @media screen and (max-width:830px) {
+    margin: 2rem;
+  }
+  @media screen and (max-width:550px) {
+    padding: 1rem;
   }
 }
 .hamburger-menu {
