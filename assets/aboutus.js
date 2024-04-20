@@ -39,3 +39,15 @@ closeLeaderModel.forEach((button, index) => {
     leaderModel[index].close();
   });
 });
+
+//hamburger menu functionality
+const btnOpen= document.querySelector('#btnOpen');
+const btnClose= document.querySelector('#btnClose');
+
+btnOpen.addEventListener('click', ()=>{
+    btnOpen.setAttribute('aria-expanded', 'true');
+})
+
+btnClose.addEventListener('click', ()=>{
+    btnOpen.setAttribute('aria-expanded', 'false')
+})
