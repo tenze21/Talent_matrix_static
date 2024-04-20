@@ -224,6 +224,9 @@
   margin-bottom: 25px;
   border-radius: 50%;
   overflow: hidden;
+  @media screen and (max-width:550px) {
+    margin-bottom: 1rem;
+  }
 }
 .leaders-name {
   margin: 0 0 10px 0;
