@@ -330,7 +330,7 @@
     height: 100vh;
   }
   @media screen and (max-width: 550px) {
-    min-height: 55vh;
+    height: 65vh;
   }
 }
 
