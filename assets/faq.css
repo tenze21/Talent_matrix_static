@@ -416,6 +416,9 @@
         width: 100%;
         border-radius: 10px;
         padding-left: 10px;
+        padding-top: 10px;
+        font-size: 1rem;
+        font-family: var(--font-family-body);
       }
     }
     .submit-btn {

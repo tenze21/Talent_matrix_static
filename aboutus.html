@@ -188,7 +188,8 @@
         <button class="close-contact-modal">
           <img src="assets/images/cross.svg" alt="Close the modal" />
         </button>
-        <form action="#" method="modal">
+        <form action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="8de617bc-b858-4fa4-8c6a-f503ffab4244">
           <h3>Contact Us</h3>
           <p>
             You need to be either a client or a registered talent of Talent Matrix
@@ -226,6 +227,7 @@
               id="message"
               cols="30"
               rows="5"
+              maxlength="500"
               required
             ></textarea>
           </div>
@@ -239,14 +241,15 @@
         <button class="close-feedback-modal">
           <img src="assets/images/cross.svg" alt="Close modal" />
         </button>
-        <form action="#" method="modal">
+        <form action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="8de617bc-b858-4fa4-8c6a-f503ffab4244">
           <h3>Feedback</h3>
           <p>
             Thank you for taking the time to provide us with your valuable
             feedback. Your insights are crucial in helping us improve our services
             to better meet your needs.
           </p>
-          <textarea name="feedback" id="feedback" cols="100" rows="8"></textarea>
+          <textarea name="feedback" id="feedback" cols="100" rows="8" maxlength="500"></textarea>
           <input type="submit" class="submit-btn" required />
         </form>
       </dialog>
