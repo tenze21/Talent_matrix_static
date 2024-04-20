@@ -366,6 +366,7 @@ i.fa-sharp.fa-solid.fa-xmark {
   }
   @media screen and (max-width:550px) {
     padding: 1rem;
+    margin: 1rem;
   }
 }
 .hamburger-menu {
