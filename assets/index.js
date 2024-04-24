@@ -76,3 +76,17 @@ btnClose.addEventListener('click', ()=>{
     btnOpen.setAttribute('aria-expanded', 'false')
 })
 
+// search input redirect
+const searchInput = document.querySelector('#search_input');
+const search= document.querySelector('#search');
+
+searchInput.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  if(search.value.trim()!==''){
+    window.location.href=`../search.html`
+  }
+})
+window.addEventListener('load',()=>{
+  search.value='';
+})
+

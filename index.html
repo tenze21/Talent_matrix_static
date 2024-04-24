@@ -40,7 +40,7 @@
             <i class="bx bx-x"></i>
           </button>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="client.html">Clients</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="faq.html">FAQ</a></li>
@@ -61,7 +61,7 @@
           </p>
         </div>
         <div class="search_field">
-          <div class="search_bar">
+          <form action="#" class="search_bar" id="search_input">
             <i class="bx bx-search"></i>
             <input
               type="text"
@@ -69,14 +69,14 @@
               name="search"
               placeholder="Search Talents"
             />
-          </div>
+          </form>
           <div class="popular">
             <p>Popular:</p>
             <ul class="popular_search_list">
-              <li class="list_item"><a href="#">Graphics Design</a></li>
-              <li class="list_item"><a href="#">Web Design</a></li>
-              <li class="list_item"><a href="#">Artificial Intelligence</a></li>
-              <li class="list_item"><a href="#">Music & Audio</a></li>
+              <li class="list_item"><a href="search.html">Graphics Design</a></li>
+              <li class="list_item"><a href="search.html">Web Design</a></li>
+              <li class="list_item"><a href="search.html">Artificial Intelligence</a></li>
+              <li class="list_item"><a href="search.html">Music & Audio</a></li>
             </ul>
           </div>
         </div>
@@ -340,7 +340,7 @@
         </div>
         <div class="card_container">
           <img src="assets/images/why-talent-matrix-img3.svg" alt="" />
-          <h3>verified Talents</h3>
+          <h3>Verified Talents</h3>
           <p>
             All talents registered on Talent Matrix are verified professionals in their field of work.
           </p>
@@ -400,7 +400,7 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="category">
-          <h5>Category</h5>
+          <h5>Search Talent: Category</h5>
           <a href="#">Artificial Intelligence</a>
           <a href="#">Art & Photography</a>
           <a href="#">Fashion & Model</a>
@@ -455,10 +455,8 @@
         <input type="hidden" name="access_key" value="8de617bc-b858-4fa4-8c6a-f503ffab4244">
         <h3>Contact Us</h3>
         <p>
-          You need to be either a client or a registered talent of Talent Matrix
-          to contact us through this. If you are not either of these please use
-          our email address or any of the social platforms provided to contact
-          us.
+          We would love to hear from you. Please fill out the form below and we
+          will get back to you as soon as possible.
         </p>
         <fieldset>
           <legend>Role:</legend>
@@ -478,12 +476,12 @@
               <input type="radio" id="talent" name="role" value="talent" />
               <label for="talent">Talent</label>
             </div>
+            <div class="talent">
+              <input type="radio" id="other" name="role" value="other" />
+              <label for="talent">Other</label>
+            </div>
           </div>
         </fieldset>
-        <div class="id-field">
-          <label for="ID">ID:</label>
-          <input type="text" id="ID" name="ID" pattern="[0-9]{8}" required />
-        </div>
         <div class="message-field">
           <label for="message">Message:</label>
           <textarea

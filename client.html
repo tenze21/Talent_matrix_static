@@ -34,7 +34,7 @@
         </button>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="client.html">Clients</a></li>
+          <li><a href="client.html" class="active">Clients</a></li>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
@@ -90,7 +90,7 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="category">
-          <h5>Category</h5>
+          <h5>Search Talent: Category</h5>
           <a href="#">Artificial Intelligence</a>
           <a href="#">Art & Photography</a>
           <a href="#">Fashion & Model</a>
@@ -139,16 +139,14 @@
     <!-- Contact us module start -->
     <dialog class="contact-modal" id="contact-modal">
       <button class="close-contact-modal">
-        <img src="assets/images/cross.svg" alt="Close dialog" />
+        <img src="assets/images/cross.svg" alt="Close the modal" />
       </button>
       <form action="https://api.web3forms.com/submit" method="post">
         <input type="hidden" name="access_key" value="8de617bc-b858-4fa4-8c6a-f503ffab4244">
         <h3>Contact Us</h3>
         <p>
-          You need to be either a client or a registered talent of Talent Matrix
-          to contact us through this. If you are not either of these please use
-          our email address or any of the social platforms provided to contact
-          us.
+          We would love to hear from you. Please fill out the form below and we
+          will get back to you as soon as possible.
         </p>
         <fieldset>
           <legend>Role:</legend>
@@ -159,6 +157,7 @@
                 id="client"
                 name="role"
                 value="client"
+                spellcheck="false"
                 required
               />
               <label for="client">Client</label>
@@ -167,12 +166,12 @@
               <input type="radio" id="talent" name="role" value="talent" />
               <label for="talent">Talent</label>
             </div>
+            <div class="talent">
+              <input type="radio" id="other" name="role" value="other" />
+              <label for="talent">Other</label>
+            </div>
           </div>
         </fieldset>
-        <div class="id-field">
-          <label for="ID">ID:</label>
-          <input type="text" id="ID" name="ID" pattern="[0-9]{8}" required />
-        </div>
         <div class="message-field">
           <label for="message">Message:</label>
           <textarea
@@ -180,7 +179,6 @@
             id="message"
             cols="30"
             rows="5"
-            spellcheck="false"
             required
           ></textarea>
         </div>
@@ -188,7 +186,6 @@
       </form>
     </dialog>
     <!-- Contact us modal end -->
-
     <!-- Feedback modal start-->
     <dialog class="feedback-modal">
       <button class="close-feedback-modal">

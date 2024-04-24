@@ -1,6 +1,7 @@
 const passwordEl= document.querySelector('#password');
 const confirmPasswordEl= document.querySelector('#confirm_password');
 const form= document.querySelector('#password_reset_form');
+const success= document.querySelector('.success_message');
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -10,7 +11,8 @@ form.addEventListener('submit', (e)=>{
     let isFormValid= isPasswordSecure && isConfirmPasswordValid;
 
     if(isFormValid){
-        location.reload();
+        form.style.display='none';
+        success.style.display='flex';
     }
 })
 

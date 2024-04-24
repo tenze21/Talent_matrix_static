@@ -97,10 +97,13 @@
 .navbar ul li a {
   &:hover,
   &:active,
-  &:focus-visible {
+  &:focus-visible{
     color: var(--green);
     outline: none;
   }
+}
+.navbar ul li .active{
+  color: var(--green);
 }
 .nav-btns {
   display: flex;
@@ -152,7 +155,7 @@
   height: 100vh;
   .logo {
     width: 20rem;
-    height: 8rem;
+    height: 3rem;
   }
   .hero_content {
     margin-top: 1.5rem;
@@ -644,6 +647,9 @@
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+        p{
+          font-family: var(--font-family-body);
+        }
         .quotation {
           .bx {
             font-size: 2.5rem;
@@ -660,6 +666,9 @@
             height: 30px;
             border-radius: 50%;
             object-fit: cover;
+          }
+          h3{
+            font-family: var(--font-family-header);
           }
         }
       }
@@ -750,10 +759,9 @@
       border-radius: 10px;
       padding: 23px;
       box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-      /* img{
+      img{
         height: 20rem;
-        width: ;
-      } */
+      }
       p{
         font-family: var(--font-family-body);
         font-size: 1.3rem;
@@ -808,14 +816,14 @@
     h5 {
       font-family: var(--font-family-header);
       margin-bottom: 5px;
-      font-size: 24px;
-      font-weight: var(--font-weight-semi-bold);
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-medium);
     }
     a {
       text-decoration: none;
       color: #fff;
       font-family: var(--font-family-body);
-      font-size: 24px;
+      font-size: 1.3rem;
       font-weight: var(--font-weight-medium);
       width: fit-content;
       position: relative;
@@ -846,7 +854,7 @@
       text-decoration: none;
       color: #fff;
       font-family: var(--font-family-body);
-      font-size: 24px;
+      font-size: 1.3rem;
       font-weight: var(--font-weight-medium);
       position: relative;
       width: fit-content;
@@ -872,7 +880,7 @@
     font-family: var(--font-family-body);
     color: #fff;
     margin-top: 40px;
-    font-size: 24px;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     gap: 17px;
@@ -915,7 +923,7 @@
   max-width: 850px;
   border-radius: 20px;
   border: 2px solid black;
-  padding: 20px 54px;
+  padding: 20px 25px;
   position: relative;
   margin: auto;
   position: fixed;
