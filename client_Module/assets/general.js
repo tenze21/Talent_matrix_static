@@ -7,6 +7,7 @@ function toggleAriaExpanded(){
 openProfileMenu.addEventListener('click', toggleAriaExpanded);
 
 //hamburger menu functionality
+/* This code snippet is handling the functionality of a hamburger menu. */
 const btnOpen= document.querySelector('#btnOpen');
 const btnClose= document.querySelector('#btnClose');
 
