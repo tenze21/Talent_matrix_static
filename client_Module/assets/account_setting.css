@@ -61,6 +61,7 @@ main{
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 3rem;
   h1{
     font-size: 3rem;
     text-align: center;
@@ -124,7 +125,7 @@ main{
   }
   .details{
     display: grid;
-    grid-template-columns: repeat(2, 17rem);
+    grid-template-columns: repeat(2, 20rem);
     gap: 1.5rem;
     p{
       font-size: 1.3rem;
@@ -269,20 +270,67 @@ main{
           width: 320px;
         }
       }
+      small{
+        color: red;
+      }
+    }
+    .address_field{
       fieldset{
+        display: flex;
+        align-items: flex-end;
         border: none;
-        legend{
-          font-size: 1.3rem;
-          font-weight: var(--font-weight-medium);
-          margin-bottom: 0.3rem;
-        }
-        input{
-          max-width: 500px !important;
+        gap: 10px;
+        .form_field_address{
+          legend{
+            font-size: 1.3rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 0.3rem;
+          }
+          select{
+            max-width: 500px;
+            height: 45px;
+            border-radius: 10px;
+            padding-left: 1rem;
+            font-family: var(--font-family-body);
+            border: 2px solid #000;
+            @media screen and (max-width: 550px) {
+              width: 339.2px;
+            }
+          }
+          input{
+            max-width: 500px;
+            height: 45px;
+            border-radius: 10px;
+            padding-left: 1rem;
+            font-family: var(--font-family-body);
+            @media screen and (max-width: 550px) {
+              width: 320px;
+            }
+          }
+          small{
+            color: red;
+          }
+          &:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            @media screen and (min-width: 550px) {
+              small{
+                position: absolute;
+                white-space: nowrap;
+                top: 50px;
+                right: -25px;
+              }
+              
+            }
+            @media screen and (max-width:550px){
+              width: 320px;
+            }
+          }
         }
         @media screen and (max-width:550px) {
-          display: flex;
           flex-direction: column;
-          gap: 5px;
+          align-items: flex-start;
         }
       }
     }
