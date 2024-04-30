@@ -65,8 +65,12 @@ body {
 }
 .logo {
   position: absolute;
-  top: 70px;
-  left: 70px;
+  top: 50px;
+  left: 50px;
+  @media screen and (max-width: 830px) {
+    top: 20px;
+    left: 20px;
+  }
 }
 .registration-form {
   display: flex;
@@ -122,6 +126,7 @@ body {
       color: red;
       font-family: var(--font-family-body);
       font-size: 1rem;
+      max-width: 425px;
     }
   }
   .password-field {
@@ -143,7 +148,7 @@ body {
         display: flex;
         gap: 7px;
         input {
-          width: 200px;
+          width: 208px;
           height: 48px;
           border: 2px solid var(--grey-dark);
           border-radius: 8px;
@@ -152,7 +157,7 @@ body {
           font-size: 1.1rem;
         }
         select {
-          width: 200px;
+          width: 208px;
           height: 52px;
           border: 2px solid var(--grey-dark);
           border-radius: 8px;
@@ -167,8 +172,9 @@ body {
         .region-field {
           small {
             color: red;
-            font-family: var(--blue-light);
+            font-family: var(--font-family-body);
             font-size: 1rem;
+            width: 200px;
           }
         }
       }
@@ -228,6 +234,9 @@ body {
       input {
         width: 350px;
       }
+      small{
+        max-width: 350px;
+      }
     }
     .address-field {
       fieldset {
@@ -254,6 +263,9 @@ body {
     margin-top: 10px;
     .form-field {
       input {
+        width: 320px;
+      }
+      small{
         width: 320px;
       }
     }
