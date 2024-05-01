@@ -1,43 +1,3 @@
-var CategorySlider = new Swiper(".category-slider", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  loop: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2.5,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-const initTestimonilSlider=()=>{
-  const slideBtns= document.querySelectorAll(".slide-button");
-  const testimonialList= document.querySelector(".testimonial-list");
-  const sliderWrapper=document.querySelector(".slider_wrapper");
-  const maxScrollLeft= sliderWrapper.scrollWidth - sliderWrapper.clientWidth;
-  
-  slideBtns.forEach(button=>{
-    button.addEventListener('click', ()=>{
-      const direction= button.id==="prev-slide"? -1 : 1;
-      const scrollAmount= sliderWrapper.clientWidth * direction;
-      console.log(scrollAmount);
-      sliderWrapper.scrollBy({left: scrollAmount, behavior:"smooth"})
-    })
-  });
-}
-window.addEventListener("resize", initTestimonilSlider);
-window.addEventListener("load", initTestimonilSlider);
-
 //for opening the contact us model
 const openContactModel=document.querySelector('#open-contact-modal');
 const closeContactModal= document.querySelector('.close-contact-modal');
@@ -75,21 +35,6 @@ btnOpen.addEventListener('click', ()=>{
 btnClose.addEventListener('click', ()=>{
     btnOpen.setAttribute('aria-expanded', 'false')
 })
-
-// search input redirect
-// const searchInput = document.querySelector('#search_input');
-// const search= document.querySelector('#search');
-
-// searchInput.addEventListener('submit', (e)=>{
-//   e.preventDefault();
-//   if(search.value.trim()!==''){
-//     window.location.href=`../search.html`
-//   }
-// })
-// window.addEventListener('load',()=>{
-//   search.value='';
-// })
-
 
 // Search suggestions logic
 const options = [
@@ -182,6 +127,7 @@ const options = [
 
 const searchInput= document.querySelector('#search');
 const resultDisplay= document.querySelector('.search_box');
+const searchForm= document.querySelector('#search_form');
 
 searchInput.onkeyup= function(){
   resultDisplay.style.display='block';
@@ -203,6 +149,9 @@ function display(result){
 }
 
 function selectInput(list){
-  searchInput.value=list.innerHTML;
+  let selectedOption= list.innerHTML;
+  searchInput.value=selectedOption;
   resultDisplay.innerHTML="";
+  searchForm.submit();
+  searchInput.value= selectedOption;
 }

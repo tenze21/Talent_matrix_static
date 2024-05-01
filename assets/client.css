@@ -55,6 +55,25 @@
     --font-weight-bold: 700;
     --font-weight-extra-bold: 700;
   }
+  body{
+    &::-webkit-scrollbar {
+      width: 10px; /* Width of the scrollbar */
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Background color of the track */
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--blue); /* Color of the thumb */
+      border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--blue-dark); /* Color of the thumb on hover */
+      cursor: grabbing;
+    }
+  }
   .navbar {
     display: flex;
     font-family: var(--font-family-header);
