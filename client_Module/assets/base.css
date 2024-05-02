@@ -147,7 +147,7 @@ span {
           flex-direction: column;
           gap: 0.4rem;
           border: 1px solid var(--grey-dark);
-          width: 250px;
+          width: 270px;
           border-radius: 5px;
           padding: 0.5rem;
           display: none;

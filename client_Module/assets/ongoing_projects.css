@@ -289,8 +289,7 @@ main{
 .confirmation_modal{
   margin: auto;
   position: fixed;
-  max-width: 700px;
-  height: 150px;
+  max-width: 400px;
   border-radius: 10px;
   padding: 1.5rem;
   @media screen and (max-width: 550px) {
@@ -305,9 +304,10 @@ main{
     height: 100%;
     p{
       font-size: 1.5rem;
+      text-align: center;
     }
     .btns{
-      align-self: flex-end;
+      align-self: center;
       button{
         padding: 7px 1.5rem;
         border-radius: 8px;

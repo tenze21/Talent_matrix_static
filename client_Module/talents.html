@@ -21,28 +21,48 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="assets/selectrole.css" /> -->
-    <link rel="stylesheet" href="assets/search.css">
+    <link rel="stylesheet" href="assets/talents.css">
+    <link rel="stylesheet" href="assets/base.css">
     <title>Search Section</title>
 </head>
 <body>
   <nav class="navbar">
-    <img src="assets/images/logo.svg" alt="Logo" />
+    <img src="assets/images/logo.svg" alt="Logo" class="logo"/>
     <button class="topnavOpen" id="btnOpen" aria-expanded="false">
-      <i class='bx bx-menu'></i>
-    </button> 
+      <i class="bx bx-menu"></i>
+    </button>
     <div class="topnav">
-      <button class="topnavClose" id="btnClose"><i class='bx bx-x'></i></button>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="client.html">Clients</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="faq.html" class="active">FAQ</a></li>
+      <button class="topnavClose" id="btnClose">
+        <i class="bx bx-x"></i>
+      </button>
+      <ul class="nav_list">
+        <li class="nav_item"><a href="talents.html" aria-current="page">Talents</a></li>
+        <li class="nav_item projects_nav">
+          <a href="#">Projects <i class='bx bxs-chevron-down'></i></a>
+          <ul class="sub_nav_list">
+            <li class="sub_nav_item" ><a href="ongoing_projects.html">Ongoing Projects</a></li>
+            <hr>
+            <li class="sub_nav_item"><a href="completed_projects.html">Completed Projects</a></li>
+          </ul>
+        </li>
+        <li class="nav_item"><a href="hires.html">My Hires</a></li>
+        <li class="nav_item mobile"><a href="ongoing_projects.html">Ongoing Projects</a></li>
+        <li class="nav_item mobile"><a href="completed_projects.html">Completed Projects</a></li>
+        <li class="nav_item mobile"><a href="account_setting.html">Account Setting</a></li>
+        <li class="nav_item mobile"><a href="../login.html">Logout</a></li>
       </ul>
-      <div class="nav-btns">
-        <a href="login.html" class="login-btn">Login</a>
-        <a href="selectrole.html" class="register-btn">Register</a>
-      </div>
+    </div>
+    <div class="profile_wrapper">
+       <button class="profile" aria-expanded="false"><img src="assets/images/tenzin-img.svg" alt="profile picture"></button> 
+       <div class="profile_menu">
+        <img src="assets/images/tenzin-img.svg" alt="profile picture">
+        <h3 id="client_name">Tenzin Choda</h3>
+        <h5>Client</h5>
+        <ul>
+            <li><a href="account_setting.html"><i class='bx bx-cog'></i> Account Settings</a></li>
+            <li><a href="../login.html"><i class='bx bx-log-out'></i> Logout</a></li>
+        </ul>
+       </div>
     </div>
   </nav>
   <main>
@@ -282,8 +302,8 @@
         <p>copyright&copy; Talent Matrix 2024. All Rights Reserved.</p>
       </div>
     </footer>
-      <!-- Contact us module start -->
-    <dialog class="contact-modal" id="contact-modal">
+     <!-- Contact us module start -->
+     <dialog class="contact-modal" id="contact-modal">
       <button class="close-contact-modal">
         <img src="assets/images/cross.svg" alt="Close the modal" />
       </button>
@@ -333,7 +353,6 @@
     </dialog>
     <!-- Contact us modal end -->
 
-
     <!-- Feedback modal start-->
     <dialog class="feedback-modal">
       <button class="close-feedback-modal">
@@ -352,6 +371,7 @@
     </dialog>
     </div>
   </div>
-  <script src="assets/search.js"></script>
+  <script src="assets/talents.js"></script>
+  <script src="assets/general.js"></script>
 </body>
 </html>
