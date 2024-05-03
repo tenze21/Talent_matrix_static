@@ -574,22 +574,6 @@ i.fa-sharp.fa-solid.fa-xmark {
         }
       }
     }
-    .id-field {
-      display: flex;
-      flex-direction: column;
-      font-family: var(--font-family-header);
-      font-weight: var(--font-weight-medium);
-      font-size: 24px;
-      margin-bottom: 23px;
-      input {
-        width: 316px;
-        height: 43px;
-        border: 2px solid black;
-        border-radius: 10px;
-        margin-top: 3px;
-        padding-left: 10px;
-      }
-    }
     .message-field {
       display: flex;
       flex-direction: column;

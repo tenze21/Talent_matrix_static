@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+
+    <!-- font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- font import -->
+
+    <!-- incon import -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -24,7 +28,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <!-- <script src="assets/aboutus.js"></script> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -32,9 +35,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href=""> -->
+    <!-- incon import -->
+
+    <!-- style files -->
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="assets/talent_profile.css" />
+    <!-- style files -->
+
+    <title>Profile</title>
   </head>
   <body>
     <nav class="navbar">
@@ -136,16 +144,19 @@
         </div>
         <button class="hire_btn">Hire</button>
         <!-- confirmation modal start -->
-      <dialog class="confirmation_modal">
-        <div>
-          <p>A hire request will be sent to the talent with the details of your project.</p>
-          <div class="btns">
-            <button class="cancel_btn">Cancel</button>
-            <button class="confirm_btn">Confirm</button>
+        <dialog class="confirmation_modal">
+          <div>
+            <p>
+              A hire request will be sent to the talent with the details of your
+              project.
+            </p>
+            <div class="btns">
+              <button class="cancel_btn">Cancel</button>
+              <button class="confirm_btn">Confirm</button>
+            </div>
           </div>
-        </div>
-      </dialog>
-      <!-- confirmation modal end -->
+        </dialog>
+        <!-- confirmation modal end -->
       </div>
       <div class="detail-box">
         <div class="fullname">
@@ -198,14 +209,70 @@
       </div>
       <div class="review-box">
         <div class="header">
-            <h3>Review</h3>
-            <button class="rate_review">Leave a review</button>
+          <h3>Review</h3>
+          <button class="rate_review">Leave a review</button>
         </div>
         <!-- review modal start -->
-
+        <dialog class="review_modal">
+          <form action="#" method="modal">
+            <section class="rating_wrapper" aria-labelledby="rating_header">
+              <fieldset>
+                <legend>Rating(<i class="bx bxs-star"></i>)</legend>
+                <div class="fieldset_flex">
+                  <div class="radio_field">
+                    <input
+                      type="radio"
+                      name="rating"
+                      id="one"
+                      value="1"
+                      required
+                    />
+                    <label for="one">1</label>
+                  </div>
+                  <div class="radio_field">
+                    <input type="radio" name="rating" id="two" value="2" />
+                    <label for="two">2</label>
+                  </div>
+                  <div class="radio_field">
+                    <input type="radio" name="rating" id="three" value="3" />
+                    <label for="three">3</label>
+                  </div>
+                  <div class="radio_field">
+                    <input type="radio" name="rating" id="four" value="4" />
+                    <label for="four">4</label>
+                  </div>
+                  <div class="radio_field">
+                    <input type="radio" name="rating" id="five" value="5" />
+                    <label for="five">5</label>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <section class="review_wrapper" aria-labelledby="review_header">
+              <h2 class="review_header">Review</h2>
+              <p>
+                Let the talent know how you feel about their work by leaving an
+                honest review. Your review will help the talents know about
+                their skills and the clients to look for the best people for
+                their job.
+              </p>
+              <textarea
+                name="review"
+                id="review"
+                cols="30"
+                rows="10"
+                required
+                spellcheck="false"
+                autocomplete="off"
+              ></textarea>
+            </section>
+            <div class="btns">
+              <input type="reset" id="cancel_btn" value="Cancel" />
+              <input type="submit" id="submit_btn" value="Post" />
+            </div>
+          </form>
+        </dialog>
         <!-- review modal end -->
-
-
 
         <!-- <div class="review_wrapper">
           <div class="client">
@@ -351,49 +418,6 @@
         <p>copyright&copy; Talent Matrix 2024. All Rights Reserved.</p>
       </div>
     </footer>
-    <!-- review modal start -->
-    <dialog class="review_modal">
-        <form action="#" method="modal">
-            <section class="rating_wrapper" aria-labelledby="rating_header">
-                <fieldset>
-                    <legend>Rating(<i class='bx bxs-star'></i>) </legend>
-                    <div class="fieldset_flex">
-                        <div class="radio_field">
-                            <input type="radio" name="rating" id="one" value="1" required>
-                            <label for="one">1</label>
-                        </div>
-                        <div class="radio_field">
-                            <input type="radio" name="rating" id="two" value="2">
-                            <label for="two">2</label>
-                        </div>
-                        <div class="radio_field">
-                            <input type="radio" name="rating" id="three" value="3">
-                            <label for="three">3</label>
-                        </div>
-                        <div class="radio_field">
-                            <input type="radio" name="rating" id="four" value="4">
-                            <label for="four">4</label>
-                        </div>
-                        <div class="radio_field">
-                            <input type="radio" name="rating" id="five" value="5">
-                            <label for="five">5</label>
-                        </div>
-                    </div>
-                </fieldset>
-            </section>
-            <section class="review_wrapper" aria-labelledby="review_header">
-                <h2 class="review_header">Review</h2>
-                <p>Let the talent know how you feel about their work by leaving an honest review. Your review will help the talents know about their skills and the clients to look for the best people for their job.</p>
-                <textarea name="review" id="review" cols="30" rows="10" required spellcheck="false" autocomplete="off"></textarea>
-            </section>
-            <div class="btns">
-                <input type="reset" id="cancel_btn" value="Cancel">
-                <input type="submit" id="submit_btn" value="Post">
-            </div>
-        </form>
-    </dialog>
-        
-    <!-- review modal end -->
     <!-- Contact us module start -->
     <dialog class="contact-modal" id="contact-modal">
       <button class="close-contact-modal">
