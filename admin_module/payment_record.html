@@ -49,23 +49,27 @@
             <div class="flex">
                 <div class="form_field">
                     <label for="projectid">Project ID:</label>
-                    <input type="number" id="projectid" name="Project ID">
+                    <input type="number" id="projectid" name="Project ID" autocomplete="off">
+                    <small></small>
                 </div>
                 <div class="form_field">
                     <label for="clientid">Client ID:</label>
-                    <input type="number" id="clientid" name="Client ID">
+                    <input type="number" id="clientid" name="Client ID" autocomplete="off">
+                    <small></small>
                 </div>
                 <div class="form_field">
                     <label for="amount">Amount:</label>
                     <input type="number" id="amount" name="Amount">
+                    <small></small>
                 </div>
                 <div class="form_field">
                     <label for="status">Status:</label>
                     <select name="status" id="status">
                         <option value="">Select a project status</option>
-                        <option value="ongoing">Ongoing</option>
-                        <option value="completed">Completed</option>
+                        <option value="Ongoing">Ongoing</option>
+                        <option value="Completed">Completed</option>
                     </select>
+                    <small></small>
                 </div>
             </div>
             <div class="form_btns">
@@ -85,17 +89,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>12345678</td>
-                    <td>12345678</td>
-                    <td>12345678</td>
-                    <td>completed</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </main>
@@ -120,5 +113,6 @@
           <p>copyright&copy; Talent Matrix 2024. All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="assets/payment_record.js"></script>
 </body>
 </html>

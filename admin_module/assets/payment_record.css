@@ -60,6 +60,12 @@ main {
         -moz-appearance: textfield;
       }
     }
+    small{
+        color: red;
+        font-family: var(--font-family-header);
+        font-size: 1rem;
+        margin-top: 5px;
+    }
   }
   .form_btns{
       align-self: flex-end;
