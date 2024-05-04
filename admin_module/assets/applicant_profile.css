@@ -272,40 +272,6 @@ h3 img {
     color: var(--grey-dark);
     font-weight: var(--font-weight-semi-bold);
   }
-  .project {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    h4 {
-      font-family: var(--font-family-header);
-      font-size: 1.3rem;
-      font-weight: var(--font-weight-medium);
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-family: var(--font-family-body);
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-    .project_skills {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      @media screen and (max-width: 830px) {
-        gap: 0.5rem;
-      }
-      li {
-        font-family: var(--font-family-body);
-        border: 1px solid var(--blue);
-        border-radius: 100px;
-        padding: 0.5rem 1rem;
-        color: var(--blue);
-        @media screen and (max-width: 830px) {
-          padding: 0.5rem 0.5rem;
-        }
-      }
-    }
-  }
 }
 .workHis-box h3 {
   font-size: 1.5rem;
@@ -352,46 +318,4 @@ h3 img {
   color: var(--grey-dark);
   font-family: var(--font-family-body);
 }
-.client {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-}
-.client img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-  @media screen and (max-width: 830px) {
-    width: 25px;
-    height: 25px;
-  }
-}
-.client h5 {
-  display: flex;
-  align-items: center;
-}
-.client .bxs-star {
-  font-size: 20px;
-  color: #ffe606;
-}
-.client .client-name {
-  font-family: var(--font-family-header);
-  font-weight: var(--font-weight-semi-bold);
-  font-size: 16px;
-  width: 68%;
-}
-.client h5 {
-  display: flex;
-  justify-self: end;
-  font-family: var(--font-family-header);
-  font-size: 16px;
-  font-weight: var(--font-weight-semi-bold);
-}
-.review_wrapper p {
-  font-family: var(--font-family-body);
-  font-size: 1rem;
-  margin-top: 1.3rem;
-  margin-bottom: 1rem;
-  width: auto;
-}
+
