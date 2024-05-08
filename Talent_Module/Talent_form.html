@@ -29,77 +29,80 @@
     <!-- <link rel="stylesheet" href="assets/aboutus.css"> -->
 </head>
 <body>
-    <form>
-        <div class="greeting">
-            <h2>Hi Tenzin,</h2>
-            <h5>Lets Create Your Profile</h5>
-        </div>
-        <div class="describe">
-            <p>A good profile will increase your hire rate and improve your visibility on the platform. So take your time with this form but no worries if you can’t make it well right now you can always edit the details later on.  </p>
-        </div>
-        <div class="profile">
-            <div class="image">
-                <img src="assets/images/person.svg" alt="" id="profile-pic">
-                <label class="icon" for="input-file"><span class="plus-icon material-symbols-outlined">add</span></label>
-                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+    <main>
+        <form action="">
+            <div class="greeting">
+                <h2>Hi <span>Tenzin</span>,</h2>
+                <h5>&nbspLets Create Your Profile.</h5>
             </div>
-            <div class="upload">
-                <h4>Upload a profile picture.</h4>
-                <p>Give yourself an image on Talent Matrix.</p>
-                <div class="name-1">
-                    <h4>Full Name:</h4>
-                    <input type="text" placeholder="Name submitted in the Register form." required>
+            <div class="describe">
+                <p>A good profile will increase your hire rate and improve your visibility on the platform. So take your time with this form but no worries if you can’t make it well right now you can always edit the details later on.  </p>
+            </div>
+            <div class="profile">
+                <div class="image">
+                    <img src="assets/images/person.svg" alt="" id="profile-pic">
+                    <label class="icon" for="input-file"><span class="plus-icon material-symbols-outlined">add</span></label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+                </div>
+                <div class="upload">
+                    <h4>Upload a profile picture.</h4>
+                    <p>Give yourself an image on Talent Matrix.</p>
+                    <div class="name-1">
+                        <h4>Full Name:&nbsp<span>Tenzin Choda</span></h4>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="row-1">
-            <div class="user-detail">
-                <h3>UserName:</h3>
-                <p>What should we call you on Talent Matrix?</p>
-                <input type="text" required>
-            </div>
-            <div class="address">
-                <h3>Address:</h3>
-                <input type="text" placeholder="Dzongkhag" required></form>
-                <input type="text" placeholder="Gewog" required></form>
-            </div>
-        </div>
-        <hr>
-        <div class="Bio">
-            <h3>Bio</h3>
-        <p>Write a short description about yourself</p>
-        <textarea name="" id="my-text" rows="7" style="padding: 10px;"></textarea>
-        <p>Maximum of 500 words(<span id="result"></span>)</p>
-        </div>
-        <hr style="height: 0.2px;">
-        <div class="education">
-            <h3>Education:</h3>
-            <div class="row-2">
-                <div class="school">
-                    <div class="sub-topic">School</div>
+            <hr>
+            <div class="column">
+                <div class="user-detail">
+                    <h3>UserName:</h3>
+                    <p>What should we call you on Talent Matrix?</p>
                     <input type="text" required>
-                    <div class="sub-topic">Field of Study(Optional)</div>
-                    <input type="text" placeholder="Ex.Computer Science" required>
                 </div>
-                <div class="date">
-                    <div class="sub-topic">Date Attended(Optional)</div>
-                    <div class="row-2">
-                        <div class="calender">
-                            <select name="From" id="" style="width: 374px; border: none; @media screen and (max-width:550px) {
-                                width: 200px;
-                            }outline: none;">
+                <div class="address">
+                    <h3>Address:</h3>
+                    <input type="text" placeholder="Dzongkhag" required id="dzongkhag"></form>
+                    <input type="text" placeholder="Gewog" required id="gewog"></form>
+                </div>
+            </div>
+            <hr>
+            <div class="Bio">
+                <h3>Bio</h3>
+                <p>Write a short description about yourself</p>
+                <textarea name="" id="my-text" rows="7" style="padding: 10px;"></textarea>
+                <p>Maximum of 500 words(<span id="result"></span>)</p>
+            </div>
+            <hr>
+            <div class="education">
+                <h3>Education:</h3>
+                <div class="column">
+                    <div class="school">
+                        <div class="sub-topic">School</div>
+                        <input type="text" required>
+                        <div class="sub-topic">Field of Study(Optional)</div>
+                        <input type="text" placeholder="Ex.Computer Science" required>
+                    </div>
+                    <div class="date">
+                        <div class="sub-topic">Date Attended(Optional)</div>
+                        <div class="column">
+                            <select name="From" id="">
                                 <option value="" disabled selected hidden>From</option>
+                                <option value="">2019</option>
+                                <option value="">2020</option>
+                                <option value="">2021</option>
+                                <option value="">2022</option>
+                                <option value="">2023</option>
                                 <option value="">2024</option>
                                 <option value="">2025</option>
                                 <option value="">2026</option>
                             </select>
-                        </div>
-                        <div class="calender">
-                            <select name="From" id="" style="width: 374px; border: none; @media screen and (max-width:550px) {
-                                width: 200px;
-                            }outline: none;">
+                            <select name="From" id="till">
                                 <option value="" disabled selected hidden>To for expected graduation date</option>
+                                <option value="">2019</option>
+                                <option value="">2020</option>
+                                <option value="">2021</option>
+                                <option value="">2022</option>
+                                <option value="">2023</option>
                                 <option value="">2024</option>
                                 <option value="">2025</option>
                                 <option value="">2026</option>
@@ -108,108 +111,105 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="skill">
-            <h3>Skills</h3>
-            <div class="row-3">
-                <div class="expertise">
-                    <!-- <div class="sub-topic">Expertise</div> -->
-                    <div class="row-4">
-                        <div class="expert">
-                            <div class="sub-topic">Expertise</div>
-                            <div class="dropdown1" id="custom-dropdown">
-                                <div class="selected-options" id="selected-options"></div>
-                                <div class="arrow"><span class="material-symbols-outlined">expand_more</span></div>
-                                <div class="options" id="options">
-                                    <div class="search-box">
-                                        <input type="text" class="search-input" placeholder="Search..." id="search-input" required>
+            <hr>
+            <div class="skill">
+                <h3>Skills</h3>
+                <div class="column">
+                    <div class="expertise">
+                        <!-- <div class="sub-topic">Expertise</div> -->
+                        <div class="column">
+                            <div class="expert">
+                                <div class="sub-topic">Expertise</div>
+                                <div class="dropdown1" id="custom-dropdown">
+                                    <div class="selected-options" id="selected-options"></div>
+                                    <div class="arrow"><span class="material-symbols-outlined">expand_more</span></div>
+                                    <div class="options" id="options">
+                                        <div class="search-box">
+                                            <input type="text" class="search-input" placeholder="Search..." id="search-input" required>
+                                        </div>
+                                        <!-- Options will be inserted here dynamically -->
                                     </div>
-                                    <!-- Options will be inserted here dynamically -->
+                                </div>
+                                <p>Maximum 10 Skills.</p>
+                            </div>
+                            <div class="wrapper">
+                                <div class="sub-topic">Categories</div>
+                                <div class="select-btn">
+                                  <span></span>
+                                  <span class="material-symbols-outlined">expand_more</span>
+                                </div>
+                                <div class="content">
+                                  <div class="search">
+                                    <!-- <i class="uil uil-search"></i> -->
+                                    <input spellcheck="false" type="text" placeholder="Search">
+                                  </div>
+                                  <ul class="c_options"></ul>
                                 </div>
                             </div>
-                            <p>Maximum 10 Skills.</p>
-                        </div>
-                        <div class="wrapper">
-                            <div class="sub-topic">Categories</div>
-                            <div class="select-btn">
-                              <span></span>
-                              <span class="material-symbols-outlined">expand_more</span>
-                            </div>
-                            <div class="content">
-                              <div class="search">
-                                <!-- <i class="uil uil-search"></i> -->
-                                <input spellcheck="false" type="text" placeholder="Search">
-                              </div>
-                              <ul class="c_options"></ul>
+                            <div class="experience">
+                                <div class="sub-topic">Experience</div>
+                                <select name="" id="experience" required>
+                                    <option value="" disabled selected hidden>Experience for how many year?</option>
+                                    <option value="1">1-2years</option>
+                                    <option value="2">2-3years</option>
+                                    <option value="3">3-4years</option>
+                                    <option value="4">4-more years</option>
+                                </select>
+                                <p>For how long have you been practicing your expertise</p>
                             </div>
                         </div>
-                        <div class="experience">
-                            <div class="sub-topic">Experience</div>
-                            <select name="" id="experience" required>
-                                <option value=""></option>
-                                <option value="1">1-2years</option>
-                                <option value="2">2-3years</option>
-                                <option value="3">3-4years</option>
-                                <option value="4">4-more years</option>
-                            </select>
-                            <p>For how long have you been practicing your expertise</p>
+                    </div>
+        
+                </div>
+            </div>
+            <hr>
+            <div class="employ">
+                <h3>Employment (Optional):</h3>
+                <div class="column">
+                    <div class="company">
+                        <div class="sub-topic">Company</div>
+                        <input type="text">
+                    </div>
+                    <div class="title">
+                        <div class="sub-topic">Title</div>
+                            <input type="text" placeholder="Ex.Font-end developer,photographic etc">
+                    </div>
+                </div>
+                <div class="Duration">
+                    <div class="sub-topic">Duration</div>
+                    <div class="column">
+                        <div class="till">
+                            <input type="text" placeholder="From" onfocus="(this.type='date')">
+                        </div>
+                        <h4>Through</h4>
+                        <div class="till">
+                            <input type="text" placeholder="From" onfocus="(this.type='date')">
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-        <hr>
-        <div class="employ">
-            <h3>Employment (Optional):</h3>
-            <div class="row-4">
-                <div class="company">
-                    <div class="sub-topic">Company</div>
-                    <input type="text">
-                </div>
-                <div class="title">
-                    <div class="sub-topic">Title</div>
-                        <input type="text" placeholder="Ex.Font-end developer,photographic etc">
+                <div class="working">
+                    <input type="checkbox" value="work" id="checkbox">
+                    <label for="work">I currently work here.</label>
                 </div>
             </div>
-            <div class="Duration">
-                <div class="sub-topic">Duration</div>
-                <div class="row-5">
-                    <div class="till">
-                        <input type="text" placeholder="From" onfocus="(this.type='date')">
-                        <!-- <span class="material-symbols-outlined">calendar_month</span> -->
-                    </div>
-                    <h4>Through</h4>
-                    <div class="till">
-                        <input type="text" placeholder="From" onfocus="(this.type='date')">
-                    </div>
-                </div>
+            <hr>
+            <div class="social-media">
+                <h3>Social Media:</h3>
+                <div class="sub-topic">Facebook</div>
+                <input type="url"placeholder="URL">
+        
+                <div class="sub-topic">Twitter</div>
+                <input type="url"placeholder="URL">
+        
+                <div class="sub-topic">Linkedin</div>
+                <input type="url"placeholder="URL">
             </div>
-            <!-- <input type="radio" value="work">
-            <label for="work">I currently work here.</label> -->
-            <div class="row-6">
-                <input type="checkbox" value="work" id="checkbox">
-                <label for="work">I currently work here.</label>
+            <hr>
+            <div class="submit">
+                <input type="submit" value="Finished">
             </div>
-        </div>
-        <hr>
-        <div class="media">
-            <h3>Social Media:</h3>
-            <div class="sub-topic">Facebook</div>
-            <input type="text"placeholder="URL"></form>
-
-            <div class="sub-topic">Twitter</div>
-            <input type="text"placeholder="URL"></form>
-
-            <div class="sub-topic">Linkedin</div>
-            <input type="text"placeholder="URL">
-        </div>
-        <hr>
-        <div class="submit">
-            <a href=""><input id="btn" type="submit" value="Finish"></a>
-        </div>
-    </form>
+        </form>
+    </main>
     <script src="assets/upload.js"></script>
      <script src="assets/categores_search.js"></script>
      <script src="assets/expertise.js"></script>
