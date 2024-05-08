@@ -310,9 +310,27 @@ main{
     img{
         height: 120px;
         width: 120px;
+        border-radius: 50%;
+        background-color: #bfbfbf;
         @media screen and (max-width:550px) {
             height: 60px;
             width: 60px;
+        }
+    }
+    label{
+        margin-top: 70px;
+        margin-left: -20px;
+        .plus-icon{
+            border-radius: 50%;
+            background-color: var(--grey-dark);
+            color: white;
+            @media screen and (max-width:550px) {
+                font-size: 10px;
+            }
+        }
+        @media screen and (max-width:550px) {
+            margin-top: 40px; 
+            margin-left: -12px;
         }
     }
     input{
