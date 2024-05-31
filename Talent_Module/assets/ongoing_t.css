@@ -218,6 +218,7 @@ p{
     align-items: center;
     background-image: linear-gradient(to top, rgb(20 189 243 /0.3), rgb(20 189 243 /0.3)), url(images/no_projects.jpeg);
     background-repeat: no-repeat;
+    background-position: center;
     border-radius: 8px;
     @media screen and (max-width:550px) {
     width: 20%;

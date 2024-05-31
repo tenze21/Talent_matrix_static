@@ -21,9 +21,9 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const role = document.querySelector('input[name="role"]:checked').value;
     if (role==="talent"){
-        window.location.href = "../apply.html";
+        window.location.href = "apply.html";
     }else{
-        window.location.href = "../clientRegister.html";
+        window.location.href = "clientRegister.html";
     }
 })
 

@@ -94,3 +94,9 @@
         });
 })();
 
+
+const form =document.querySelector('form');
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    window.open="Talent_profile.html";
+});

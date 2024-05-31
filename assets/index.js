@@ -205,4 +205,5 @@ function display(result){
 function selectInput(list){
   searchInput.value=list.innerHTML;
   resultDisplay.innerHTML="";
+  window.location.href="search.html"
 }
