@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
     isPasswordSecure &&
     isConfirmPasswordValid;
   if (isFormValid) {
-    location.reload();
+    window.location.href="client_Module/account_setting.html";
   }
 });
 

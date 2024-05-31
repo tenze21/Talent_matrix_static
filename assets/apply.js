@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
     isPasswordSecure &&
     isConfirmPasswordValid;
   if (isFormValid) {
-    location.reload();
+    window.location.href="Talent_Module/Talent_form.html";
   }
 });
 
